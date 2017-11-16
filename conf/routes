@@ -14,3 +14,9 @@ GET     /domain/:id                 controllers.DomainController.getDomainInfo(i
 POST    /domain/                    controllers.DomainController.insertDomain
 PUT     /domain/:id                 controllers.DomainController.updateDomain(id: Int)
 DELETE  /domain/:id                 controllers.DomainController.deleteDomain(id: Int)
+
+GET     /service/                    controllers.ServiceController.getAllServices
+GET     /service/:id                 controllers.ServiceController.getServiceInfo(id: Int)
+POST    /service/                    controllers.ServiceController.insertService
+PUT     /service/:id                 controllers.ServiceController.updateService(id: Int)
+DELETE  /service/:id                 controllers.ServiceController.deleteService(id: Int)

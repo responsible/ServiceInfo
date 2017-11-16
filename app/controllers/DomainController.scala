@@ -3,10 +3,10 @@ package controllers
 import javax.inject.{Inject, Singleton}
 
 import models.Domain
+import models.Domains.{domainReads, domainWrites}
 import play.api.libs.json._
 import play.api.mvc.{AbstractController, AnyContent, ControllerComponents, Request}
 import services.DomainService
-import utils.JsonReadWriter._
 import utils.JsonResponse
 
 import scala.concurrent.ExecutionContext.Implicits.global

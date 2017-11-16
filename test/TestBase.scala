@@ -1,6 +1,6 @@
 package test
 
-import models.Domains
+import models.{Domains, Services}
 import slick.jdbc.PostgresProfile.api._
 
 import scala.language.implicitConversions
@@ -15,9 +15,11 @@ trait TestBase extends FlatSpec with BeforeAndAfter {
 
   before {
     db.run(Domains.query.schema.create).await
+    db.run(Services.query.schema.create).await
   }
 
   after {
+    db.run(Services.query.schema.drop).await
     db.run(Domains.query.schema.drop).await
   }
 }
